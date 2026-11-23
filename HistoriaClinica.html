@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icono hospital.jpg">
+    <title>Historia Clínica - Hospital Nueva Vida</title>
+</head>
+<body>
+    <!--CABECERA-->
+    <header>
+        <h1 style="text-align: center;">Hospital Metropolitano Nueva Vida</h1>
+        <p style="text-align: center;">Innovación médica y calidez humana al servicio de tu salud</p>
+    </header>
+
+    <!--NAVEGACION-->
+    <nav>
+        <a href="/index.html">Home</a>
+        <a href="/page/HistoriaClinica.html">Historia Clínica</a>
+        <a href="/index.html#servicios">Servicios</a>
+        <a href="/index.html#contacto">Contacto</a>
+    </nav>
+    <hr>
+
+    <h2 style="text-align: center;">Formulario de Historia Clínica del Paciente</h2>
+
+    <form action="#">
+        <!-- BLOQUE 1: 12 CAMPOS VISTOS EN CLASE -->
+
+        <!-- Campo 1: text -->
+        <label for="nombre">1. Nombres y apellidos del paciente:</label>
+        <br><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej. María Fernanda Torres" required>
+        <br><br>
+
+        <!-- Campo 2: text -->
+        <label for="cedula">2. Número de cédula o pasaporte:</label>
+        <br><br>
+        <input type="text" id="cedula" name="cedula" placeholder="Ej. 1723456789" required>
+        <br><br>
+
+        <!-- Campo 3: email -->
+        <label for="email">3. Correo electrónico:</label>
+        <br><br>
+        <input type="email" id="email" name="email" placeholder="paciente@ejemplo.com" required>
+        <br><br>
+
+        <!-- Campo 4: password -->
+        <label for="password">4. Contraseña para portal de resultados:</label>
+        <br><br>
+        <input type="password" id="password" name="password" placeholder="Cree una contraseña segura" required>
+        <br><br>
+
+        <!-- Campo 5: date -->
+        <label for="fecha_nacimiento">5. Fecha de nacimiento:</label>
+        <br><br>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+        <br><br>
+
+        <!-- Campo 6: tel -->
+        <label for="telefono">6. Teléfono celular de contacto:</label>
+        <br><br>
+        <input type="tel" id="telefono" name="telefono" placeholder="0991234567" required>
+        <br><br>
+
+        <!-- Campo 7: number -->
+        <label for="edad">7. Edad (en años):</label>
+        <br><br>
+        <input type="number" id="edad" name="edad" min="0" max="120" placeholder="Ej. 30" required>
+        <br><br>
+
+        <!-- Campo 8: radio -->
+        <label>8. Género:</label>
+        <br><br>
+        <label for="masculino"><input type="radio" id="masculino" name="genero" value="masculino" required>Masculino</label>
+        <label for="femenino"><input type="radio" id="femenino" name="genero" value="femenino">Femenino</label>
+        <label for="otro"><input type="radio" id="otro" name="genero" value="otro">Otro</label>
+        <br><br>
+
+        <!-- Campo 9: checkbox -->
+        <label>9. Antecedentes patológicos personales:</label>
+        <br><br>
+        <label for="diabetes"><input type="checkbox" id="diabetes" name="antecedentes" value="diabetes">Diabetes</label>
+        <label for="hipertension"><input type="checkbox" id="hipertension" name="antecedentes" value="hipertension">Hipertensión</label>
+        <label for="asma"><input type="checkbox" id="asma" name="antecedentes" value="asma">Asma</label>
+        <label for="alergias"><input type="checkbox" id="alergias" name="antecedentes" value="alergias">Alergias</label>
+        <label for="ninguno"><input type="checkbox" id="ninguno" name="antecedentes" value="ninguno">Ninguno</label>
+        <br><br>
+
+        <!-- Campo 10: select -->
+        <label for="tipo_sangre">10. Grupo sanguíneo:</label>
+        <br><br>
+        <select name="tipo_sangre" id="tipo_sangre" required>
+            <option value="" disabled selected>Seleccionar</option>
+            <option value="O+">O Positivo (O+)</option>
+            <option value="O-">O Negativo (O-)</option>
+            <option value="A+">A Positivo (A+)</option>
+            <option value="A-">A Negativo (A-)</option>
+            <option value="B+">B Positivo (B+)</option>
+            <option value="B-">B Negativo (B-)</option>
+            <option value="AB+">AB Positivo (AB+)</option>
+            <option value="AB-">AB Negativo (AB-)</option>
+        </select>
+        <br><br>
+
+        <!-- Campo 11: textarea -->
+        <label for="sintomas">11. Motivo de consulta y síntomas actuales:</label>
+        <br><br>
+        <textarea name="sintomas" id="sintomas" rows="4" cols="50" placeholder="Describa detalladamente sus síntomas..." required></textarea>
+        <br><br>
+
+        <!-- Campo 12: file -->
+        <label for="documento">12. Adjuntar documento de identidad o examen previo:</label>
+        <br><br>
+        <input type="file" id="documento" name="documento">
+        <br><br>
+
+        <hr>
+        <h3>Campos Nuevos Investigados (HTML5)</h3>
+
+        <!-- Campo 13 (Nuevo 1): input type="color" -->
+        <label for="color_triaje">13. Color de etiqueta Triaje (Verde = Leve, Amarillo = Moderado, Rojo = Urgente):</label>
+        <br><br>
+        <input type="color" id="color_triaje" name="color_triaje" value="#00cc44">
+        <br><br>
+
+        <!-- Campo 14 (Nuevo 2): input type="range" -->
+        <label for="escala_dolor">14. Escala de dolor percibido (deslice de izquierda a derecha, 1 al 10):</label>
+        <br><br>
+        <input type="range" id="escala_dolor" name="escala_dolor" min="1" max="10" value="3">
+        <br><br>
+
+        <!-- Campo 15 (Nuevo 3): input list + datalist -->
+        <label for="especialista">15. Médico especialista solicitado (escriba o seleccione de la lista):</label>
+        <br><br>
+        <input list="lista_especialistas" id="especialista" name="especialista" placeholder="Buscar médico o especialidad..." required>
+        <datalist id="lista_especialistas">
+            <option value="Dra. Omaira Begoña - Medicina Interna">
+            <option value="Dra. Carolina Viteri - Pediatría">
+            <option value="Dr. Mateo Jaramillo - Cardiología">
+            <option value="Dra. Daniela Cevallos - Ginecología">
+            <option value="Dr. Felipe Morales - Traumatología">
+        </datalist>
+        <br><br>
+
+        <!--BOTONES-->
+        <input type="submit" value="Guardar Historia Clínica">
+        <button type="reset">Limpiar</button>
+    </form>
+    <hr>
+
+    <!--PIE DE PAGINA-->
+    <footer>
+        <p> 2026 Hospital Metropolitano Nueva Vida</p>
+        <address>Quito - Ecuador</address>
+    </footer>
+</body>
+</html>
